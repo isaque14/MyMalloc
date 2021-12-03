@@ -12,15 +12,20 @@ namespace mymalloc{
     struct s_block
     {
         size_t size;
-        t_block next;
+        struct s_block *next;
+        struct s_block *prev;
         int free;
+        void *ptr;
         char data[1];
     };
 
     int init(size_t);
     void* malloc(size_t);
-    bool free(void*);
+    void free(void*);
     void split_block(t_block , size_t );
     t_block extend_heap(t_block , size_t);
     t_block find_block(t_block*, size_t );
+    t_block fusion(t_block);
+    t_block get_block(void*);
+     int valid_addr(void *);
 }
