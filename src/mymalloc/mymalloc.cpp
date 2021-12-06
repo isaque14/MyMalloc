@@ -20,6 +20,25 @@ namespace mymalloc
         return (b);
     }
 
+    // t_block find_block(t_block *last, size_t size){
+
+    //     t_block b = (t_block)base;
+    //     t_block biggest;
+    //     biggest->size = 0;
+    //     while (b){
+    //         if (b && b->free && (b->size == size))
+    //             return b;
+    //         if (b && b->free && (b->size > size))
+    //             if(b->size > biggest->size)
+    //                 biggest = b;
+
+    //         *last = b;
+    //         b = b->next;
+
+    //     }
+    //     return biggest;
+    // }
+
     t_block extend_heap(t_block last, size_t s)
     {
         t_block b;

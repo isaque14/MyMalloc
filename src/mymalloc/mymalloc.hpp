@@ -22,10 +22,11 @@ namespace mymalloc{
     int init(size_t);
     void* malloc(size_t);
     void free(void*);
+    
     void split_block(t_block , size_t );
     t_block extend_heap(t_block , size_t);
     t_block find_block(t_block*, size_t );
     t_block fusion(t_block);
     t_block get_block(void*);
-     int valid_addr(void *);
+    int valid_addr(void *);
 }
